@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-class App extends Component {
+import Dashboard from './routes/Dashboard';
+
+import TopAppBar from '@material/react-top-app-bar';
+import MaterialIcon from '@material/react-material-icon';
+
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button onClick={() => window.location = 'http://localhost:3001/auth/google'}>Login</button>
-        <button onClick={() => {
-          fetch('http://localhost:3001/users', {
-
-          }).then(res => console.log(res));
-        }}>Test</button>
-      </div>
+      <section style={{}}>
+        <TopAppBar
+          title='Admin'
+          className='mdc-top-app-bar--fixed mdc-top-app-bar--dense'
+          navigationIcon={<MaterialIcon
+            icon='menu'
+            onClick={() => console.log('click')}
+          />}
+        />
+        <BrowserRouter>
+          <Route path='/dashboard' component={Dashboard} />
+        </BrowserRouter>
+      </section>
     );
   }
 }
