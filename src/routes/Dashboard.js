@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+// import Button from '@material/react-button';
 
 export default class Dashboard extends PureComponent {
 
@@ -6,6 +7,9 @@ export default class Dashboard extends PureComponent {
     return (
       <div>
         Dashboard
+        {/* <Button outlined>
+        Click Me!
+      </Button> */}
       </div>
     );
   }
