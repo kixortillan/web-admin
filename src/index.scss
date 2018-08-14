@@ -4,5 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+.mdc-drawer__toolbar-spacer {
+  height: 48px !important;
+}
+
+@import '@material/typography/mdc-typography.scss';
 @import '@material/react-top-app-bar/index.scss';
 @import '@material/react-material-icon/index.scss';
+@import '@material/drawer/mdc-drawer.scss';
+@import '@material/list/mdc-list.scss';
