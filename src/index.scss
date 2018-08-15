@@ -6,6 +6,12 @@ html, body, #root {
 
 .main {
   height: 100%;
+  display: inline-flex;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
 }
 
 .main-content {
@@ -16,14 +22,31 @@ html, body, #root {
   height: 48px !important;
 }
 
+.drawer {
+  width: inherit;
+  transition: width 0.2s ease-in-out 0s;
+}
+
+.drawer-collapse {
+  width: 60px !important;
+}
+
+.collapse {
+  flex: 0 0 auto;
+  & > i {
+    position: absolute;
+    right: 20px;
+  }
+}
+
 $mdc-theme-primary: #263238;
 $mdc-theme-secondary: #0D47A1;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 
 @import '@material/typography/mdc-typography.scss';
-@import '@material/react-top-app-bar/index.scss';
-@import '@material/react-material-icon/index.scss';
-@import '@material/react-button/index.scss';
+@import '@material/top-app-bar/mdc-top-app-bar.scss';
+@import '@material/button/mdc-button.scss';
 @import '@material/drawer/mdc-drawer.scss';
 @import '@material/list/mdc-list.scss';
+@import '@material/ripple/mdc-ripple.scss';
