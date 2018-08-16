@@ -15,13 +15,14 @@ export default class Drawer extends PureComponent {
 
   render() {
     return (
-      <nav className={this.state.isCollapsed ? 'drawer drawer-collapse mdc-drawer mdc-drawer--permanent' : 'drawer mdc-drawer mdc-drawer--permanent'}>
-        <div className='mdc-drawer__toolbar-spacer'>
-        <img className="c5e-logo-lockup-icon" fb-logo="" fb-size="28" src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png" />
-          <img className="c5e-logo-lockup-logotype logotype-white" src="//www.gstatic.com/mobilesdk/160323_mobilesdk/images/firebase_logotype_white_18dp.svg" alt="Firebase" />
+      <nav className={this.state.isCollapsed ? 'drawer drawer-collapse mdc-drawer mdc-drawer--permanent' : 'drawer mdc-drawer mdc-drawer--permanent'} 
+      style={{ backgroundColor: '#0277BD', borderRight: 'none' }}>
+        <div className='mdc-drawer__toolbar-spacer' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+          <img alt='' height={28} src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png" />
+          <img alt='' hidden={this.state.isCollapsed} height={20} src="//www.gstatic.com/mobilesdk/160323_mobilesdk/images/firebase_logotype_white_18dp.svg" />
         </div>
         <div className='mdc-drawer__content' style={{ flex: '1 1' }}>
-          <nav className='mdc-list'>
+          <nav className='modules mdc-list mdc-list--dense'>
             {
               Object.values(this.props.routes)
                 .map(r => {
@@ -35,7 +36,7 @@ export default class Drawer extends PureComponent {
           </nav>
         </div>
         <button className='collapse mdc-button' onClick={this.collapse}>
-          <i className='material-icons'>{this.state.isCollapsed ? 'chevron_right' : 'chevron_left'}</i>
+          <i className='material-icons' style={{ color: 'white' }}>{this.state.isCollapsed ? 'chevron_right' : 'chevron_left'}</i>
         </button>
       </nav>
     );

@@ -5,11 +5,12 @@ export default class Dashboard extends PureComponent {
 
   render() {
     return (
-      <div>
-        Dashboard
-        {/* <Button outlined>
-        Click Me!
-      </Button> */}
+      <div className='mdc-layout-grid'>
+        <div className='mdc-layout-grid__inner'>
+          <div className='mdc-layout-grid__cell'>Hello</div>
+          <div className='mdc-layout-grid__cell'>World</div>
+          <div className='mdc-layout-grid__cell'>!!!</div>
+        </div>
       </div>
     );
   }

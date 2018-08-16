@@ -6,12 +6,18 @@ html, body, #root {
 
 .main {
   height: 100%;
-  display: inline-flex;
+  display: flex;
 }
 
 .wrapper {
+  flex: 1 1 auto;
   display: flex;
   height: 100%;
+  flex-direction: column;
+}
+
+.mdc-top-app-bar {
+  position: static !important;
 }
 
 .main-content {
@@ -39,6 +45,8 @@ html, body, #root {
   }
 }
 
+@import '@material/theme/_color-palette.scss';
+
 $mdc-theme-primary: #263238;
 $mdc-theme-secondary: #0D47A1;
 $mdc-theme-on-primary: #ffffff;
@@ -49,4 +57,26 @@ $mdc-theme-on-secondary: #ffffff;
 @import '@material/button/mdc-button.scss';
 @import '@material/drawer/mdc-drawer.scss';
 @import '@material/list/mdc-list.scss';
+@import '@material/menu/mdc-menu.scss';
 @import '@material/ripple/mdc-ripple.scss';
+
+.modules {
+  @include mdc-list-item-graphic-ink-color(white);
+  @include mdc-list-item-primary-text-ink-color(white);
+}
+
+.badge[data-count]:after {
+  position: absolute;
+  content: attr(data-count);
+  font-size: 0.625rem;
+  padding: .325rem;
+  border-radius: 1rem;
+  line-height: .75em;
+  color: white;
+  background: #0D47A1;
+  text-align: center;
+  min-width: 0.2rem;
+  font-weight: bold;
+  top: 0.25rem;
+  right: 3rem;
+}
