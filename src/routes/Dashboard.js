@@ -7,7 +7,9 @@ export default class Dashboard extends PureComponent {
     return (
       <div className='mdc-layout-grid'>
         <div className='mdc-layout-grid__inner'>
-          <div className='mdc-layout-grid__cell'>Hello</div>
+          <div className='mdc-layout-grid__cell'><div className="mdc-card">
+  Simple
+</div></div>
           <div className='mdc-layout-grid__cell'>World</div>
           <div className='mdc-layout-grid__cell'>!!!</div>
         </div>

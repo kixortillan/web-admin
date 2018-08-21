@@ -55,10 +55,13 @@ $mdc-theme-on-secondary: #ffffff;
 @import '@material/typography/mdc-typography.scss';
 @import '@material/top-app-bar/mdc-top-app-bar.scss';
 @import '@material/button/mdc-button.scss';
+@import '@material/icon-button/mdc-icon-button';
 @import '@material/drawer/mdc-drawer.scss';
 @import '@material/list/mdc-list.scss';
 @import '@material/menu/mdc-menu.scss';
 @import '@material/ripple/mdc-ripple.scss';
+@import '@material/textfield/mdc-text-field.scss';
+@import '@material/card/mdc-card.scss';
 
 .modules {
   @include mdc-list-item-graphic-ink-color(white);
